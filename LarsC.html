@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1">
+    <title>Lars Clicker</title>
+    <link rel="stylesheet" type="text/css" href="css/font.css">
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <link rel="icon" type="image/x-icon" href="img/favicon.ico">
+    <script src="js/ktane-utils.js"></script>
+    <style>
+        .dark table, table {
+            border: none;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .dark table, table {
+            border: none;
+            margin-left: auto;
+            margin-right: auto;
+        }
+    </style>
+</head>
+<body>
+    <div class="section">
+        <div class="page page-bg-01">
+            <!--UpgradeHud-->
+            <div class="sidenav upgradehud" id="upgradehud">
+                <div class="button building menu" id="UB" onclick="showbuildings()">Buildings</div>
+                <div class="button building menu" id="UU" onclick="showupgrades()">Upgrades</div>
+
+                <div class="paddingmenu"></div>    
+
+                <div class="button building">Sex</div>
+            </div>     
+
+            <!--Buildhud-->
+            <div class="sidenav buildhud" id="buildhud">
+                    <div class="button building menu" id="BB" onclick="showbuildings()">Buildings</div>
+                    <div class="button building menu" id="BU" onclick="showupgrades()">Upgrades</div>
+                    
+                <div class="paddingmenu"></div>
+
+                <div class="button building" onclick="slaver()">
+                    <h3 class="buildingname">Slaver</h3>
+                    <p>Slavearbejde er billigt, men ikke så billig som din mor.</p>
+                    <p class="price" id="slaveP">Koster 10 mælk</p>
+                    <p class="price" id="slaveA">Du har 0 Slaver</p>
+                </div>
+
+                <div class="button building" onclick="børnearbejde()">
+                    <h3 class="buildingname">Børnearbejde</h3>
+                    <p>Børn er rigtig nemme at arbejde med, de er bare lidt dyrer.</p>
+                    <p class="price">Koster 100 Mælk</p>
+                    <p class="price">Du har 0 Børnearbejdere</p>
+                </div>
+
+                <div class="button building" onclick="nseelev()">
+                    <h3 class="buildingname">NSE-Elev</h3>
+                    <p>NSE-Elever er kloge og kan optimisere malkningen hurtigere.</p>
+                    <p class="price">Koster 500 Mælk</p>
+                    <p class="price">Du har 0 NSE-Elever</p>
+                </div>
+
+                <div class="button building" onclick="landmand()">
+                    <h3 class="buildingname">Landmand</h3>
+                    <p>Landmænd specialisere i at lave mælk.</p>
+                    <p class="price">Koster 2.500 Mælk</p>
+                    <p class="price">Du har 0 Landmænd</p>
+                </div>
+                
+                <div class="button building" onclick="nselærer()">
+                    <h3 class="buildingname">NSE-Lærer</h3>
+                    <p>Lærere er grådige sataner, men de er specialt gode til at fremstille mælk.</p>
+                    <p class="price">Koster 10.000 Mælk</p>
+                    <p class="price">Du har 0 NSE-Lærere</p>
+                </div>
+
+                <div class="button building" onclick="arlamalkeri()">
+                    <h3 class="buildingname">Arla Malkeri</h3>
+                    <p>Kløver mælk er bedre men det blev opkøbt af arla så det er det vi har.</p>
+                    <p class="price">Koster 100.000 Mælk</p>
+                    <p class="price">Du har 0 Malkerier</p>
+                </div>
+
+                <div class="button building" onclick="nse()">
+                    <h3 class="buildingname">Nordborg slots efterskole 2.0</h3>
+                    <p>Du køber en ny skole og producere meget mere mælk</p>
+                    <p class="price">Koster 1.000.000 Mælk</p>
+                    <p class="price">Du har 0 NSE-Efterskoler</p>
+                </div>
+            </div>
+
+            <div class="overskrift corn"><p>Lars clicker!</p></div>
+
+            <div class="clicker">
+                <div class="dLARS">
+                    <button onclick="LarsClick()" class="lars" id="clickity">
+                    <img src="img/lars.png" class="lars">
+                </button>
+            </div>
+
+            <div class="dSHINE"><img src="img/shine.png" class="shine spin"></div>
+            </div>
+            <div class="amount">
+                <p id="amount">Du har 0 liter mælk.</p>
+                <p id="MPS">Du laver 0 mælk hvert sekund.</p>
+            </div>
+            <div class="lydting"><p>Lyd niveau:</p><input type="range" id="volume-slider"></div>
+        </div>
+    </div>
+<script src="LarsClicker.js"></script>
+</body>

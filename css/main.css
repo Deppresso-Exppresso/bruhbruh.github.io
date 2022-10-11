@@ -43,14 +43,14 @@ textarea {
     display: block;
     position: relative;
     height: 0;
-    top: .25in; /* = 0.25in at 12pt (1em) */
+    top: .5in; /* = 0.25in at 12pt (1em) */
     margin: 0 .5in;
-    height: 200px;
+    height: 140px;
     width: 720px;
     background-color: rgb(66, 56, 96);
     text-align: center;
-    line-height: 200px;
-    font-size: 50px;
+    line-height: 160px;
+    font-size: 75px;
     box-shadow: 0px 0px 25px rgb(108, 108, 108);
 }
 .lists {
@@ -146,26 +146,167 @@ html,body {
     padding: 10px;
 }
 
+/* The sidebar menu */
+.sidenav {
+    height: 100%; /* Full-height: remove this if you want "auto" height */
+    width: 600px; /* Set the width of the sidebar */
+    overflow: auto;
+    position: fixed; /* Fixed Sidebar (stay in place on scroll) */
+    z-index: 1; /* Stay on top */
+    top: 0; /* Stay at the top */
+    right: 0;
+    background-color: #111; /* Black */
+    overflow-x: hidden; /* Disable horizontal scroll */
+    padding-top: 2px;
+  }
+  .sidenav::-webkit-scrollbar {
+    display: none;
+  }
+  /* The navigation menu links */
+  .sidenav div {
+    padding: 6px 8px 6px 16px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+  }
+  
+  /* When you mouse over the navigation links, change their color */
+  .sidenav div:hover {
+    transform: scale(1.01);
+  }
+  .sidenav div:active {
+    transform: scale(0.99);
+  }
+  
+  /* Style page content */
+  .main {
+    margin-left: 160px; /* Same as the width of the sidebar */
+    padding: 0px 10px;
+  }
+  
+  /* On smaller screens, where height is less than 450px, change the style of the sidebar (less padding and a smaller font size) */
+  @media screen and (max-height: 450px) {
+    .sidenav {padding-top: 15px;}
+    .sidenav a {font-size: 18px;}
+  }
+
+.lars {
+    width: 200px;
+    height: 200px;
+    background: none;
+    transition: all .05s ease-in-out;
+    border: none;
+}
+.shine {
+    width: 300px;
+    height: 300px;
+    opacity: 50%;
+}
+
+.spin {
+    animation: rotation 30s infinite linear;
+    z-index: 0;
+}
 
 
+@keyframes rotation {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(359deg);
+    }
+  }
 
 
+.lars:hover {
+    transform: scale(1.1);
+}
+
+.lars:active {
+    transform: scale(1.05);
+    transition: .2s ease-out;
+}
+
+.clicker {
+    margin: auto;
+    width: 60%;
+    margin-top: 100px;
+    margin-left: 250px;
+    position: absolute;
+}
+
+.dLARS {
+    z-index: 1;
+    padding-left: 50px;
+    padding-top: 50px;
+    position: inherit;
+}
+
+.dSHINE {
+    position: relative;
+}
 
 
+img {
+    pointer-events: none;
+}
+
+div {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
 
 
+.amount {
+    font-size: 26px;
+    height: 100px;
+    width: auto;
+    margin-top: 450px;
+    margin-left: 240px;
+}
+.building {
+    border: gray;
+    border-radius: 10px;
+    background-color: #ffffff;
+    margin: 5px;
+    height: auto;
+    font-size: 100px;
+}
+.buildingname {
+    margin: 0px;
+}
+.price {
+    text-shadow: #000 1px 1px;
+    text-indent: 5px;
+    font-weight: bold;
+    font-style: italic;
+    font-size: 80%;
+}
+.lydting {
+    padding-top: 40px;
+    padding-left: 250px;
+}
 
+.upgradehud {
+    z-index: 0;
+}
 
+#BB {
+    background-color: #bfbfbf;
+}
+.menu {
+    text-align: center;
+}
 
-
-
-
-
-
-
-
-
-
+.paddingmenu {
+    margin-top: 50px;
+}
 
 
 
@@ -398,7 +539,9 @@ tr.centered {
 
 @media screen and (min-width: 900px) {
     .page {
-        margin: 1em auto;
+        overflow-x: hidden;
+        margin-top: 2em;
+        margin-left: 50px;
         padding: 0;
         border: 1px solid #222; /* Safely using px because exists outside layout of page content */
         box-shadow: #222 0.0em 0em 0.6em;
