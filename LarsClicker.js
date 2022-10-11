@@ -16,15 +16,8 @@ var a3 = new Audio ("audio/Nons1.mp3")
 var a4 = new Audio ("audio/Nons2.mp3")
 var a5 = new Audio ("audio/Talk.mp3")
 
-
-var save = window.setInterval(function(){
-    document.cookie = "mælk=1; expires=Thu, 18 Dec 2023 12:00:00 UTC; path=/";
-    console.log(save)
-     }, 1000);
-
 function music() {
 var rng = (Math.floor(Math.random() * 100))
-console.log("sex " + rng)
 }
 
 function showbuildings() {
@@ -81,7 +74,7 @@ function slaver() {
 if(mælk >= slavecurrentprice) {
 slaveamount++
 mælk - slavecurrentprice
-console.log(slavecurrentprice + "spaghewt")
+MPS += 100
 document.getElementById("slaveP").innerHTML = "Koster " + slaveshownprice + " mælk"
 document.getElementById("slaveA").innerHTML = "Du har " + slaveamount + " slaver"
 update()
