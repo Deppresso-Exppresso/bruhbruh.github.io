@@ -402,11 +402,11 @@ body {
 }
 
 @media screen and (min-width: 900px) {
-    body {
+    body.dark {
         background: url('../img/web-background.jpg');
         background-attachment: fixed;
     }
-    body.dark {
+    body {
         background: url('../img/web-background-dark.jpg');
     }
 }
@@ -552,8 +552,6 @@ tr.centered {
         background-size: 100%;
         width: 8.5in; /* = 8.5in at 12pt (1em) */
         min-height: 11in; /* = 11in at 12pt (1em) */
-    }
-    .dark .page {
         background-color: #232323;
     }
 }
@@ -576,43 +574,18 @@ tr.centered {
     }
 }
 
+
 .page-bg-01 {
-    background-image: url("../img/page-bg-noise-01.png");
+    background-image: url("../img/page-bg-noise-01-dark.png");
+    color: #ddd;
+    background-color: #222;
 }
 
 .page-bg-02 {
-    background-image: url("../img/page-bg-noise-02.png");
-}
-
-.page-bg-03 {
-    background-image: url("../img/page-bg-noise-03.png");
-}
-
-.page-bg-04 {
-    background-image: url("../img/page-bg-noise-04.png");
-}
-
-.page-bg-05 {
-    background-image: url("../img/page-bg-noise-05.png");
-}
-
-.page-bg-06 {
-    background-image: url("../img/page-bg-noise-06.png");
-}
-
-.page-bg-07 {
-    background-image: url("../img/page-bg-noise-07.png");
-}
-
-.dark .page-bg-01 {
-    background-image: url("../img/page-bg-noise-01-dark.png");
-}
-
-.dark .page-bg-02 {
     background-image: url("../img/page-bg-noise-02-dark.png");
 }
 
-.dark .page-bg-03 {
+.page-bg-03 {
     background-image: url("../img/page-bg-noise-03-dark.png");
 }
 
@@ -630,11 +603,6 @@ tr.centered {
 
 .dark .page-bg-07 {
     background-image: url("../img/page-bg-noise-07-dark.png");
-}
-
-.dark {
-    color: #ddd;
-    background-color: #222;
 }
 
 .dark table, .dark th, .dark td {
