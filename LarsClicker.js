@@ -133,12 +133,11 @@ mælk = mælk - slave_currentprice
 MPS += 1
 slave_currentprice = slave_startprice += slave_startprice * slave_percent;
 console.log(slave_currentprice)
-document.getElementById("slaveP").innerHTML = "Koster " + slave_shownprice + " mælk"
-document.getElementById("slaveA").innerHTML = "Du har " + slave_amount + " slaver"
+document.getElementById("slaveP").innerHTML = "Koster" + slave_shownprice + "mælk"
+document.getElementById("slaveA").innerHTML = "Du har" + slave_amount + "slaver"
 update()
     }
 }
-  
 function børnearbejde(){
 if(mælk>= børnearbejde_currentprice){
 børnearbejde_amount++;
@@ -153,10 +152,9 @@ update()
     }
 } 
 
-function nseelev() {
-    if(mælk == 1) {
-        console.log("ok")
-    }
+function nseelev(){
+if(mælk>= nseelev_currentprice)
+
 }
 
 function landmand() {
