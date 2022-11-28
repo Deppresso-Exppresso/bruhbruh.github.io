@@ -149,7 +149,7 @@ html,body {
 /* The sidebar menu */
 .sidenav {
     height: 100%; /* Full-height: remove this if you want "auto" height */
-    width: 600px; /* Set the width of the sidebar */
+    width: 40%; /* Set the width of the sidebar */
     overflow: auto;
     position: fixed; /* Fixed Sidebar (stay in place on scroll) */
     z-index: 1; /* Stay on top */
@@ -218,6 +218,14 @@ html,body {
       transform: rotate(359deg);
     }
   }
+@keyframes fade {
+    from {
+        opacity: 0%;
+    }
+    to {
+        opacity: 100%;
+    }
+}
 
 
 .lars:hover {
