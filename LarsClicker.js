@@ -110,21 +110,21 @@ var nselærer_percent = 0.45;
 var nselærer_startprice = 50000;
 var nselærer_currentprice = nselærer_startprice+=
 nselærer_startprice * nselærer_percent;
-var math.floor(nselærer_currentprice);
+var nselærer_shownprice=math.floor(nselærer_currentprice);
 //variabler for arlamalkeri
 var arlamalkeri_amount = 0;
 var arlamalkeri_percent = 0.60;
 var arlamalkeri_startprice = 100000;
 var arlamalkeri_currentprice = arlamalkeri_startprice+= 
 arlamalkeri_startprice * arlamalkeri_percent;
-var math.floor(arlamalkeri_currentprice);
+var arlamalkeri_shownprice=math.floor(arlamalkeri_currentprice);
 //variabler for nordborgslots_efterskole 2.0
 var nordborgslots_efterskole_amount = 0;
 var nordborgslots_efterskole_percent = 0.75;
 var nordborgslots_efterskole_startprice = 100000000;
 var nordborgslots_efterskole_currentprice = nordborgslots_efterskole_startprice+=
 nordborgslots_efterskole_startprice * nordborgslots_efterskole_percent;
-var math.floor(nordborgslots_efterskole_currentprice);
+var nordborgslots_efterskole_shownprice=math.floor(nordborgslots_efterskole_currentprice);
 //funktioner
 function slaver() {
 if(mælk >= slave_currentprice) {
@@ -154,7 +154,7 @@ update()
 
 function nseelev(){
 if(mælk>= nseelev_currentprice)
-
+     console.log("ok")
 }
 
 function landmand() {
